@@ -12,7 +12,8 @@ import UIKit
 
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
-    AirPlayPlugin.register(with: engineBridge.pluginRegistry)
-    ScreenMirrorPluginRegistrar.register(with: engineBridge.pluginRegistry)
+    CastAirPlayPlugin.register(with: engineBridge.pluginRegistry)
+    CastMirrorPluginRegistrar.register(with: engineBridge.pluginRegistry)
+    CastPlayerPluginRegistrar.register(with: engineBridge.pluginRegistry)
   }
 }

@@ -1,17 +1,27 @@
-# fc_app3_cast_to_tv
+# Cast To Tv _ Screen Mirroring
 
-A new Flutter project.
+Fresh Flutter rebuild for casting media to compatible TVs with honest AirPlay and iOS Screen Mirroring guidance.
 
-## Getting Started
+**Bundle ID:** `com.casttotv.castscreenmirroring`
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- AirPlay route picker (public `AVRoutePickerView`)
+- Photo & video casting via system external playback
+- YouTube / Vimeo link opening in an in-app browser (when sites allow)
+- Built-in web browser
+- Screen mirroring instructions (Control Center) + optional LAN Wi‑Fi JPEG viewer
+- Remote-control information (not an IR remote)
+- Connection troubleshooting, Privacy Policy, Terms, Support
+- Light/dark theme, EN/FR/ES/AR, haptic toggle
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Build
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+dart run flutter_launcher_icons
+dart run flutter_native_splash:create
+flutter build ios --release
+```
+
+No advertising or analytics SDKs are included.

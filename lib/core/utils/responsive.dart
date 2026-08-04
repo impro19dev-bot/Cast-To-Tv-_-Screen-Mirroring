@@ -1,35 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Responsive {
-  static bool isCompact(BuildContext context) {
-    return MediaQuery.sizeOf(context).width < 375;
-  }
+abstract final class Breakpoints {
+  static bool compact(BuildContext context) =>
+      MediaQuery.sizeOf(context).shortestSide < 380;
 
-  static double horizontalPadding(BuildContext context) {
-    return isCompact(context) ? 16 : 20;
-  }
+  static double pad(BuildContext context) => compact(context) ? 16 : 20;
 
-  static double titleSize(BuildContext context) {
-    return isCompact(context) ? 18 : 20;
-  }
-
-  static double sectionTitleSize(BuildContext context) {
-    return isCompact(context) ? 16 : 18;
-  }
-
-  static double cardTitleSize(BuildContext context) {
-    return isCompact(context) ? 20 : 22;
-  }
-
-  static double featureCardHeight(BuildContext context) {
-    return isCompact(context) ? 108 : 120;
-  }
-
-  static double headerHeight(BuildContext context) {
-    return isCompact(context) ? 168 : 188;
-  }
-
-  static double gridAspectRatio(BuildContext context) {
-    return isCompact(context) ? 1.25 : 1.35;
-  }
+  static double title(BuildContext context) => compact(context) ? 20 : 22;
 }
