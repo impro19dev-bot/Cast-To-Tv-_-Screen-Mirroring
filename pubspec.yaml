@@ -1,7 +1,7 @@
 name: cast_screen_mirroring
 description: Cast media to compatible TVs with AirPlay guidance and honest iOS mirroring limits.
 publish_to: "none"
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ^3.11.0
